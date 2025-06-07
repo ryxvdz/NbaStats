@@ -1,0 +1,212 @@
+/* Estilos Gerais (Reset e Base) */
+body {
+    body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-image: url(images/inicial.png);
+    background-size: cover; /* Opcional: Garante que a imagem cubra toda a área */
+    background-position: center; /* Opcional: Centraliza a imagem */
+    background-repeat: no-repeat; /* Opcional: Evita repetição da imagem */
+    min-height: 100vh; /* Opcional: Garante que o body tenha pelo menos a altura da viewport */
+}
+}
+
+ul {
+    list-style: none;
+    margin: 0;s
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit; /* Herda a cor do elemento pai */
+}
+
+/* Estilos da Barra de Navegação */
+.navbar {
+    background-color: #000; /* Cor de fundo preta */
+    color: #fff;
+    padding: 10px 0;
+    position: fixed; /* Fixa a barra no topo */
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Garante que a barra esteja acima de outros elementos */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+}
+
+.navbar-container {
+    max-width: 1400px; /* Largura máxima do conteúdo da barra */
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between; /* Espaça os itens principais */
+    align-items: center; /* Alinha verticalmente */
+}
+
+.navbar-brand {
+    font-weight: bold;
+    font-size: 1.5em;
+    display: flex;
+    align-items: center;
+    color: #fff;
+}
+
+.navbar-brand .logo {
+    height: 30px; /* Ajuste o tamanho do seu logo */
+    margin-right: 10px;
+}
+
+.navbar-nav ul {
+    display: flex; /* Links de navegação em linha */
+    gap: 20px; /* Espaçamento entre os links */
+}
+
+.navbar-nav a {
+    color: #ccc; /* Cor dos links */
+    font-size: 0.95em;
+    padding: 5px 0;
+    transition: color 0.3s ease;
+}
+
+.navbar-nav a:hover {
+    color: #fff; /* Cor do link ao passar o mouse */
+}
+
+.navbar-actions {
+    display: flex;
+    gap: 10px; /* Espaçamento entre os botões de ação */
+    align-items: center;
+}
+
+.btn {
+    background-color: transparent;
+    color: #fff;
+    border: 1px solid transparent;
+    padding: 8px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9em;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.btn-primary {
+    background-color: #ffc107; /* Cor amarela para o botão principal (League Pass) */
+    color: #333;
+    font-weight: bold;
+    border-color: #ffc107;
+}
+
+.btn-primary:hover {
+    background-color: #e0a800; /* Tom mais escuro ao passar o mouse */
+    border-color: #e0a800;
+}
+
+.btn i {
+    margin-right: 5px; /* Espaço para ícones dentro dos botões */
+}
+
+/* Esconde o checkbox e o hamburguer por padrão */
+.menu-toggle {
+    display: none;
+}
+
+.hamburger {
+    display: none; /* Esconde o ícone do hamburguer em telas grandes */
+    font-size: 1.5em;
+    cursor: pointer;
+    color: #fff;
+}
+
+/* Responsividade (Para telas menores) */
+@media (max-width: 1024px) {
+    .navbar-nav ul {
+        gap: 15px; /* Reduz o espaçamento em telas médias */
+    }
+
+    .navbar-actions {
+        gap: 5px; /* Reduz o espaçamento dos botões em telas médias */
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar-container {
+        flex-wrap: wrap; /* Permite que os itens se quebrem para a próxima linha */
+        justify-content: center; /* Centraliza os itens quando quebram */
+    }
+
+    .navbar-brand {
+        flex-basis: 100%; /* O logo ocupa a largura total em telas pequenas */
+        text-align: center;
+        margin-bottom: 10px;
+        justify-content: center; /* Centraliza o conteúdo do brand */
+    }
+
+    .navbar-nav {
+        flex-basis: 100%; /* Ocupa a largura total para o menu de navegação */
+        order: 3; /* Coloca o menu abaixo dos botões de ação no layout flex */
+        margin-top: 15px;
+        display: none; /* Esconde o menu por padrão em telas pequenas */
+        text-align: center;
+    }
+
+    .navbar-nav ul {
+        flex-direction: column; /* Links em coluna */
+        gap: 0;
+        border-top: 1px solid #333;
+        padding-top: 10px;
+    }
+
+    .navbar-nav li {
+        width: 100%;
+        padding: 10px 0;
+        border-bottom: 1px solid #333;
+    }
+
+    .navbar-nav li:last-child {
+        border-bottom: none;
+    }
+
+    .navbar-nav a {
+        display: block; /* Ocupa a largura total para facilitar o clique */
+        padding: 10px 0;
+    }
+
+    .navbar-actions {
+        order: 2; /* Move os botões de ação para a segunda posição */
+        flex-basis: 100%;
+        justify-content: center; /* Centraliza os botões */
+        margin-bottom: 10px;
+    }
+
+    .hamburger {
+        display: block; /* Mostra o ícone do hamburguer */
+        position: absolute;
+        right: 20px;
+        top: 25px; /* Ajuste a posição conforme necessário */
+        z-index: 1001; /* Garante que o hamburguer esteja acima do menu */
+    }
+
+    /* Quando o checkbox (menu-toggle) é clicado, mostra o menu */
+    .menu-toggle:checked ~ .navbar-nav {
+        display: block;
+    }
+}
+
+/* Estilos para telas muito pequenas (ex: celulares em modo retrato) */
+@media (max-width: 480px) {
+    .navbar-actions {
+        flex-direction: column; /* Botões empilhados */
+        align-items: stretch; /* Ocupam a largura total */
+        gap: 5px;
+    }
+
+    .btn {
+        width: 100%; /* Botões ocupam a largura total */
+        text-align: center;
+    }
+}
