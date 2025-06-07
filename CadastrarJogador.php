@@ -48,11 +48,27 @@
                     <option value="Pivo">Pivô (Center)</option>
 
             <select id = "posicao" name="posicao" required>
-                    <option value="Armador"></option>
-                    <option value="Ala-Armador"></option>
-                    <option value="Ala"></option>
-                    <option value="Ala-Pivo"></option>
-                    <option value="Pivo"></option>
+                    
+                </select>
+            </div>
+
+             <div class="form-group">
+                <label for="titulos">Titulos Individuais:</label>
+                <select id="titulos" name="titulos" required>
+                    <option value="">Selecione a posição</option>
+                    <option value="MVP_Finals">MVP Finals</option>
+                    <option value="MVP_Temp-Regular">MVP Temp Regular</option>
+                    <option value="MPV_Conferencia-Oeste">MPV Conferencia Oeste</option>
+                    <option value="MPV_Conferencia-Leste">MPV Conferencia Leste</option>
+                    <option value="MPV_Denfensivo">MPV Defensivo do Ano</option>
+                    <option value="Sexto_Homem">Sexto Homem</option>
+                    <option value="Novato_Anual">Rookie the Year</option>
+                   
+                    
+
+            <select id = "titulos" name="titulos" required>
+                   
+                
                 </select>
             </div>
 
