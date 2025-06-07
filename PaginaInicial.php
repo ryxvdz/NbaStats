@@ -31,8 +31,8 @@
 
             <div class="navbar-actions">
                 <a href="#" class="btn btn-primary">League Pass</a>
-                <a href="#" class="btn">Store</a>
-                <a href="#" class="btn">Tickets</a>
+                <a href="https://www.lojanba.com/?gad_source=1&gad_campaignid=938512033&gclid=CjwKCAjwo4rCBhAbEiwAxhJlCay62rU5L7UPk8errIDoaW4-8vJazlma-5oevfFBODys1ASFLmEMphoCfMUQAvD_BwE" class="btn">Loja</a>
+                <a href="#" class="btn">Ingressos</a>
                 <a href="#" class="btn"><i class="fas fa-ellipsis-h"></i></a> <a href="#" class="btn"><i class="fas fa-user"></i> Sign in</a>
             </div>
         </div>
