@@ -1,4 +1,6 @@
+
 <!DOCTYPE html>
+
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
@@ -46,17 +48,31 @@
                     <option value="Ala">Ala (SF)</option>
                     <option value="Ala-Pivo">Ala-Pivô (PF)</option>
                     <option value="Pivo">Pivô (Center)</option>
-
-            <select id = "posicao" name="posicao" required>
-                    <option value="Armador"></option>
-                    <option value="Ala-Armador"></option>
-                    <option value="Ala"></option>
-                    <option value="Ala-Pivo"></option>
-                    <option value="Pivo"></option>
                 </select>
+            </div>
+
+            <div class="form-group">
+                <label for="ID_TITULOS">Títulos Individuais:</label>
+                <?php
+                $conn = new mysqli("localhost", "root", "", "projetobaska");
+                if ($conn->connect_error) {
+                    die("Conexão falhou: " . $conn->connect_error);
+                }
+                $titulos = $conn->query("SELECT ID_TITULOS, TITULOS_INDIVIDUAIS FROM titulos");
+                ?>
+                <select id="ID_TITULOS" name="ID_TITULOS" required>
+                    <option value="">Selecione um título</option>
+                    <?php while($row = $titulos->fetch_assoc()): ?>
+                        <option value="<?php echo $row['ID_TITULOS']; ?>">
+                            <?php echo $row['TITULOS_INDIVIDUAIS']; ?>
+                        </option>
+                    <?php endwhile; ?>
+                </select>
+                <?php $conn->close(); ?>
             </div>
 
             <button type="submit" class="btn">Cadastrar</button>
         </form>
-
-
+    </div>
+</body>
+</html>
