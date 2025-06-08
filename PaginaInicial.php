@@ -29,7 +29,7 @@
                 <ul>
                     <li><a href="#">Jogadores</a></li>
                     <li><a href="CadastrarJogador.php">Cadastrar Jogadores</a></li>
-                    <li><a href="#">Conferencias</a></li>
+                    <li><a href="https://www.nba.com/standings">Conferencias</a></li>
                   
                 </ul>
             </nav>
