@@ -8,11 +8,16 @@
     <link rel="stylesheet" href="css/PaginaInicial.css">
 </head>
 <body>
+    <body>
+    <video autoplay loop muted playsinline id="bg-video">
+        <source src="images/nbatrailer.mp4" type="video/mp4">
+        Seu navegador não suporta vídeo em background.
+    </video>
 
     <header class="navbar">
         <div class="navbar-container">
             <a href="#" class="navbar-brand">
-                Seu Site
+                NBA Stats
             </a>
 
             <input type="checkbox" id="menu-toggle" class="menu-toggle">
@@ -38,8 +43,7 @@
         </div>
     </header>
 
-    <main style="padding-top: 80px; text-align: center;">
-        <h1>Bem-vindo ao Seu Site!</h1>
+    <main class="h1site">
+        <h1>Bem-vindo ao NBA Stats!</h1>
         <p>Este é o conteúdo abaixo da sua barra de navegação.</p>
         <p>Você pode adicionar mais conteúdo aqui para testar o scroll.</p>
-        <div

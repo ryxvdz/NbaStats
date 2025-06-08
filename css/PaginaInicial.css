@@ -1,15 +1,35 @@
+
 /* Estilos Gerais (Reset e Base) */
 body {
-    body {
     margin: 0;
     font-family: 'Arial', sans-serif;
-    background-image: url(images/inicial.png);
-    background-size: cover; /* Opcional: Garante que a imagem cubra toda a área */
-    background-position: center; /* Opcional: Centraliza a imagem */
-    background-repeat: no-repeat; /* Opcional: Evita repetição da imagem */
-    min-height: 100vh; /* Opcional: Garante que o body tenha pelo menos a altura da viewport */
+    background-size: cover; /* Garante que a imagem cubra toda a área */
+    background-position: center; /* Centraliza a imagem */
+    background-repeat: no-repeat; /* Evita repetição da imagem */
+    min-height: 100vh; /* Garante que o body tenha pelo menos a altura da viewport */
 }
+#bg-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 100vw;
+    min-height: 100vh;
+    width: auto;
+    height: auto;
+    z-index: -1;
+    object-fit: cover;
 }
+.h1site {
+    color: #fff;
+    padding-top: 30px;
+    text-align: center;
+    border: 2px solid #ffc107; /* Cor e espessura da borda */
+    border-radius: 12px;        /* Opcional: bordas arredondadas */
+    margin: 100px auto 40px auto;          /* Centraliza e dá espaço externo */
+    max-width: 500px;           /* Opcional: limita a largura */
+    background: rgba(0,0,0,0.6);/* Opcional: fundo semi-transparente */
+}
+
 
 ul {
     list-style: none;
