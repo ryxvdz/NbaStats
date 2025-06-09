@@ -15,7 +15,7 @@ if ($conn->connect_error) {
 
 $ID_TITULOS = isset($_POST['ID_TITULOS']) ? $_POST['ID_TITULOS'] : null;
 if (empty($ID_TITULOS)) {
-    echo "<script>alert('Selecione um título válido!'); window.location.href='CadastrarJogador.php';</script>";
+    echo "<script>alert('Selecione um título válido!'); window.location.href='../CadastrarJogador.php';</script>";
     $conn->close();
     exit;
 }
@@ -61,7 +61,7 @@ $sql = "INSERT INTO jogadores (
 )";
 
 if ($conn->query($sql) === TRUE) {
-    echo "<script>alert('Jogador cadastrado com sucesso!'); window.location.href='CadastrarJogador.php';</script>";
+    echo "<script>alert('Jogador cadastrado com sucesso!'); window.location.href='../CadastrarJogador.php';</script>";
 } else {
     echo "<script>alert('Erro: " . $conn->error . "');</script>";
 }

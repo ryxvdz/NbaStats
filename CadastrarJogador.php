@@ -23,7 +23,7 @@
 
             <nav class="navbar-nav">
                 <ul>
-                    <li><a href="#">Jogadores</a></li>
+                    <li><a href="ListarJogador.php">Jogadores</a></li>
                     <li><a href="CadastrarJogador.php">Cadastrar Jogadores</a></li>
                     <li><a href="https://www.nba.com/standings">Conferencias</a></li>
                 </ul>
@@ -40,7 +40,7 @@
     </header>
     <div class="container">
         <h1>Cadastre seu Jogador!</h1>
-        <form action="processaJogador.php" method="post">
+        <form action="conexão/processaJogador.php" method="post">
             <div class="two-columns">
                 <div class="form-group">
                     <label for="nome">Nome:</label>

@@ -5,28 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lista de Jogadores Cadastrados</title>
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/CadastrarJogador.css">
-    <style>
-        /* Adicione um estilo básico para a tabela */
-        .container {
-            margin-top: 20px;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
-        }
-        table, th, td {
-            border: 1px solid #ddd;
-        }
-        th, td {
-            padding: 8px;
-            text-align: left;
-        }
-        th {
-            background-color: #f2f2f2;
-        }
-    </style>
+    <link rel="stylesheet" href="css/ListarJogador.css">
 </head>
 <body>
     <header class="navbar">
@@ -63,7 +42,7 @@
 
         <?php
         // Inclui o arquivo de conexão com o banco de dados
-        require_once 'conexão/conexãoListar.php'; //'require_once' para garantir que o arquivo seja incluído apenas uma vez
+        require_once 'conexão/RotaListar.php'; //'require_once' para garantir que o arquivo seja incluído apenas uma vez
 
         // Consulta SQL para selecionar todos os jogadores
         $sql = "SELECT ID_JOGADORES, NOME_DOS_JOGADORES, SOBRENOME, DATANASCIMENTO, ALTURA, PESO, POSICAO, TITULO_NOME FROM jogadores";
@@ -95,6 +74,8 @@
                 echo "<td>" . $row["PESO"] . "</td>";
                 echo "<td>" . $row["POSICAO"] . "</td>";
                 echo "<td>" . $row["TITULO_NOME"] . "</td>";
+                echo "<td><a href='EditarJogador.php?id=" . $row["ID_JOGADORES"] . "' class='btn btn-edit'>Editar</a></td>";
+                echo "<td><a href='conexão/ExcluirJogador.php?id=" . $row["ID_JOGADORES"] . "' class='btn btn-delete' onclick='return confirm(\"Tem certeza que deseja excluir este jogador?\")'>Excluir</a></td>";
                 echo "</tr>";
             }
             echo "</tbody>";
