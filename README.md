@@ -12,12 +12,15 @@
 - **Visual Moderno**: Estilo baseado nas cores e tipografia da NBA, com fonte Oswald (Google Fonts).
 
 ## 📁 Estrutura de Pastas
+
+```
 NbaStats/
 ├── css/
 │   ├── CadastrarJogador.css
 │   ├── EditarJogador.css
 │   ├── ListarJogador.css
 │   └── PaginaInicial.css
+│
 ├── conexão/
 │   ├── AtualizarJogador.php
 │   ├── connect.php
@@ -26,15 +29,19 @@ NbaStats/
 │   ├── processaJogador.php
 │   ├── RotaExcluir.php
 │   └── RotaListar.php
+│
 ├── database/
-│   └── projetobaska (1).sql
+│   └── projetobaska.sql
+│
 ├── images/
 │   ├── inicial.png
 │   └── nbatrailer.mp4
+│
 ├── PaginaInicial.php
 ├── CadastrarJogador.php
 ├── EditarJogador.php
 └── ListarJogador.php
+```
 
 
 ## 🛠️ Tecnologias Utilizadas
