@@ -46,5 +46,5 @@
 
     <main class="h1site">
         <h1>Bem-vindo ao NBA Stats!</h1>
-        <p>Este é o conteúdo abaixo da sua barra de navegação.</p>
-        <p>Você pode adicionar mais conteúdo aqui para testar o scroll.</p>
+        <p></p>
+        <p></p>

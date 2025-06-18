@@ -1,5 +1,23 @@
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+th,
+td,
+label,
+input,
+select,
+button,
+a,
+p,
+div,
+span {
+  font-family: "Oswald", Arial, sans-serif;
+}
 body {
- font-family: 'Oswald', Arial, sans-serif;
   background-image: url(../images/inicial.png);
   background-size: cover;
   background-position: center;
@@ -12,24 +30,23 @@ body {
   margin: 0;
 }
 
-
 .container {
   background: rgba(20, 20, 30, 0.92);
   padding: 28px 18px 24px 18px; /* padding menor */
   border-radius: 18px;
-  box-shadow: 0 8px 32px rgba(0,0,0,0.45);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.45);
   width: 100%;
   max-width: 480px; /* menor largura máxima */
   margin: 110px auto 0 auto; /* centralizado e abaixo da navbar */
   backdrop-filter: blur(2px);
-  border: 1.5px solid rgba(255,255,255,0.08);
+  border: 1.5px solid rgba(255, 255, 255, 0.08);
 }
 
 h1 {
-    font-family: 'Oswald';
+  font-family: "Oswald";
   text-align: center;
   color: #ffc107;
- font-size: 1.4em; /* título menor */
+  font-size: 1.4em; /* título menor */
   margin-bottom: 22px;
   letter-spacing: 1px;
   font-weight: bold;
@@ -41,7 +58,7 @@ h1 {
 }
 
 label {
-font-family: 'Oswald';
+  font-family: "Oswald";
   font-size: 1em;
   display: block;
   margin-bottom: 7px;
@@ -58,11 +75,11 @@ select {
   padding: 9px 10px;
   border: 1.5px solid #444;
   border-radius: 6px;
-  background: rgba(30,30,40,0.85);
+  background: rgba(30, 30, 40, 0.85);
   color: #fff;
   font-size: 0.97em;
   transition: border 0.2s, box-shadow 0.2s;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
   outline: none;
 }
 
@@ -71,7 +88,7 @@ input[type="number"]:focus,
 input[type="date"]:focus,
 select:focus {
   border: 1.5px solid #ffc107;
-  box-shadow: 0 0 0 2px rgba(255,193,7,0.15);
+  box-shadow: 0 0 0 2px rgba(255, 193, 7, 0.15);
 }
 
 input[type="radio"],
@@ -99,7 +116,7 @@ button {
   font-weight: bold;
   width: 100%;
   margin-top: 28px;
-  box-shadow: 0 2px 12px rgba(255,193,7,0.18);
+  box-shadow: 0 2px 12px rgba(255, 193, 7, 0.18);
   letter-spacing: 1px;
   transition: background 0.2s, color 0.2s, transform 0.15s;
 }
@@ -108,7 +125,7 @@ button:hover {
   background: linear-gradient(90deg, #ff9800 60%, #ffc107 100%);
   color: #111;
   transform: translateY(-2px) scale(1.03);
-  box-shadow: 0 4px 18px rgba(255,193,7,0.25);
+  box-shadow: 0 4px 18px rgba(255, 193, 7, 0.25);
 }
 
 @media (max-width: 600px) {
@@ -121,181 +138,182 @@ button:hover {
   }
 }
 
-
-
 /* --- Navbar igual da PaginaInicial --- */
 .navbar {
-    
-    background-color: #000;
-    color: #fff;
-    padding: 10px 0;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    left: 0;
-    z-index: 1000;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  background-color: #000;
+  color: #fff;
+  padding: 10px 0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 .navbar-container {
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: 0 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .navbar-brand {
-    font-weight: bold;
-    font-size: 1.5em;
-    display: flex;
-    align-items: center;
-    color: #fff;
+  font-weight: bold;
+  font-size: 1.5em;
+  display: flex;
+  align-items: center;
+  color: #fff;
 }
 
 .navbar-nav ul {
-    display: flex;
-    gap: 20px;
+  display: flex;
+  gap: 20px;
 }
 
 .navbar-nav a {
-    color: #ccc;
-    font-size: 0.95em;
-    padding: 5px 0;
-    transition: color 0.3s ease;
+  color: #ccc;
+  font-size: 0.95em;
+  padding: 5px 0;
+  transition: color 0.3s ease;
 }
 
 .navbar-nav a:hover {
-    color: #fff;
+  color: #fff;
 }
 
 .navbar-actions {
-    display: flex;
-    gap: 10px;
-    align-items: center;
+  display: flex;
+  gap: 10px;
+  align-items: center;
 }
 
 .btn {
-    background-color: transparent;
-    color: #fff;
-    border: 1px solid transparent;
-    padding: 8px 15px;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 0.9em;
-    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+  background-color: transparent;
+  color: #fff;
+  border: 1px solid transparent;
+  padding: 8px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9em;
+  transition: background-color 0.3s ease, color 0.3s ease,
+    border-color 0.3s ease;
 }
 
 .btn:hover {
-    background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 .btn-primary {
-    background-color: #ffc107;
-    color: #333;
-    font-weight: bold;
-    border-color: #ffc107;
+  background-color: #ffc107;
+  color: #333;
+  font-weight: bold;
+  border-color: #ffc107;
 }
 
 .btn-primary:hover {
-    background-color: #e0a800;
-    border-color: #e0a800;
+  background-color: #e0a800;
+  border-color: #e0a800;
 }
 
 .btn i {
-    margin-right: 5px;
+  margin-right: 5px;
 }
 
 .menu-toggle {
-    display: none;
+  display: none;
 }
 
 .hamburger {
-    display: none;
-    font-size: 1.5em;
-    cursor: pointer;
-    color: #fff;
+  display: none;
+  font-size: 1.5em;
+  cursor: pointer;
+  color: #fff;
 }
 
 /* Responsividade */
 @media (max-width: 1024px) {
-    .navbar-nav ul {
-        gap: 15px;
-    }
-    .navbar-actions {
-        gap: 5px;
-    }
+  .navbar-nav ul {
+    gap: 15px;
+  }
+  .navbar-actions {
+    gap: 5px;
+  }
 }
 
 @media (max-width: 768px) {
-    .navbar-container {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-    .navbar-brand {
-        flex-basis: 100%;
-        text-align: center;
-        margin-bottom: 10px;
-        justify-content: center;
-    }
-    .navbar-nav {
-        flex-basis: 100%;
-        order: 3;
-        margin-top: 15px;
-        display: none;
-        text-align: center;
-    }
-    .navbar-nav ul {
-        flex-direction: column;
-        gap: 0;
-        border-top: 1px solid #333;
-        padding-top: 10px;
-    }
-    .navbar-nav li {
-        width: 100%;
-        padding: 10px 0;
-        border-bottom: 1px solid #333;
-    }
-    .navbar-nav li:last-child {
-        border-bottom: none;
-    }
-    .navbar-nav a {
-        display: block;
-        padding: 10px 0;
-    }
-    .navbar-actions {
-        order: 2;
-        flex-basis: 100%;
-        justify-content: center;
-        margin-bottom: 10px;
-    }
-    .hamburger {
-        display: block;
-        position: absolute;
-        right: 20px;
-        top: 25px;
-        z-index: 1001;
-    }
-    .menu-toggle:checked ~ .navbar-nav {
-        display: block;
-    }
+  .navbar-container {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .navbar-brand {
+    flex-basis: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+    justify-content: center;
+  }
+  .navbar-nav {
+    flex-basis: 100%;
+    order: 3;
+    margin-top: 15px;
+    display: none;
+    text-align: center;
+  }
+  .navbar-nav ul {
+    flex-direction: column;
+    gap: 0;
+    border-top: 1px solid #333;
+    padding-top: 10px;
+  }
+  .navbar-nav li {
+    width: 100%;
+    padding: 10px 0;
+    border-bottom: 1px solid #333;
+  }
+  .navbar-nav li:last-child {
+    border-bottom: none;
+  }
+  .navbar-nav a {
+    display: block;
+    padding: 10px 0;
+  }
+  .navbar-actions {
+    order: 2;
+    flex-basis: 100%;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+  .hamburger {
+    display: block;
+    position: absolute;
+    right: 20px;
+    top: 25px;
+    z-index: 1001;
+  }
+  .menu-toggle:checked ~ .navbar-nav {
+    display: block;
+  }
 }
 
 @media (max-width: 480px) {
-    .navbar-actions {
-        flex-direction: column;
-        align-items: stretch;
-        gap: 5px;
-    }
-    .btn {
-        width: 100%;
-        text-align: center;
-    }
+  .navbar-actions {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 5px;
+  }
+  .btn {
+    width: 100%;
+    text-align: center;
+  }
 }
 
-
-
-body, h1, label, input, select, button {
-  font-family: 'Oswald', Arial, sans-serif;
+body,
+h1,
+label,
+input,
+select,
+button {
+  font-family: "Oswald", Arial, sans-serif;
 }

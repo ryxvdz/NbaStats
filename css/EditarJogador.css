@@ -6,14 +6,8 @@ body {
   background-repeat: no-repeat;
   min-height: 100vh;
   margin: 0;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
 
-/* Container centralizado e estilizado */
 .container {
   background: rgba(20, 20, 30, 0.92);
   padding: 28px 18px 24px 18px;
@@ -21,12 +15,11 @@ body {
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.45);
   width: 100%;
   max-width: 480px;
-  margin: 0 auto;
+  margin: 110px auto 0 auto;
   backdrop-filter: blur(2px);
   border: 1.5px solid rgba(255, 255, 255, 0.08);
 }
 
-/* Título */
 h1 {
   font-family: "Oswald";
   text-align: center;
@@ -38,7 +31,6 @@ h1 {
   text-shadow: 0 2px 8px #000;
 }
 
-/* Grupos de formulário */
 .form-group {
   margin-bottom: 16px;
 }
@@ -91,7 +83,6 @@ input[type="checkbox"] {
   font-weight: 400;
 }
 
-/* Botão */
 button {
   background: linear-gradient(90deg, #ffc107 60%, #ff9800 100%);
   color: #222;
@@ -115,7 +106,6 @@ button:hover {
   box-shadow: 0 4px 18px rgba(255, 193, 7, 0.25);
 }
 
-/* Responsividade */
 @media (max-width: 600px) {
   .container {
     padding: 18px 6vw 24px 6vw;
@@ -126,7 +116,6 @@ button:hover {
   }
 }
 
-/* Garantir fonte consistente */
 body,
 h1,
 label,

@@ -1,280 +1,421 @@
-/* Estilos Gerais */
-body {
-    margin: 0;
-    font-family: 'Oswald', sans-serif;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    min-height: 100vh;
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+th,
+td,
+label,
+input,
+select,
+button,
+a,
+p,
+div,
+span {
+  font-family: "Oswald", Arial, sans-serif;
 }
 
-/* Container principal */
+body {
+  background-image: url(../images/inicial.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.main-center {
+  min-height: calc(100vh - 60px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 60px;
+  box-sizing: border-box;
+  width: 100vw;
+}
+
 .container {
-    margin: 100px auto 20px auto;
-    max-width: 1200px;
-    padding: 20px;
-    background: rgba(0, 0, 0, 0.6); /* Fundo semi-transparente */
-    border-radius: 12px;
-    color: #fff;
+  max-width: 1200px;
+  width: 100%;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 12px;
+  color: #fff;
+  margin: 0 auto;
+  box-sizing: border-box;
 }
 
 /* Título */
 h1 {
-    text-align: center;
-    color: #ffc107;
-    margin-bottom: 20px;
-    border: 2px solid #ffc107;
-    padding: 10px;
-    border-radius: 12px;
-    background: rgba(0, 0, 0, 0.8);
+  text-align: center;
+  color: #ffc107;
+  margin-bottom: 20px;
+  border: 2px solid #ffc107;
+  padding: 10px;
+  border-radius: 12px;
+  background: rgba(0, 0, 0, 0.8);
 }
 
 /* Tabela */
 table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-    background-color: rgba(255, 255, 255, 0.1);
-    color: #fff;
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #fff;
 }
 
-table, th, td {
-    border: 1px solid #ddd;
+table,
+th,
+td {
+  border: 1px solid #ddd;
 }
 
-th, td {
-    padding: 10px;
-    text-align: left;
+th,
+td {
+  padding: 10px;
+  text-align: left;
 }
 
 th {
-    background-color: #ffc107;
-    color: #333;
+  background-color: #ffc107;
+  color: #333;
 }
 
 tr:nth-child(even) {
-    background-color: rgba(255, 255, 255, 0.05);
+  background-color: rgba(255, 255, 255, 0.05);
 }
 
 tr:hover {
-    background-color: rgba(255, 255, 255, 0.2);
+  background-color: rgba(255, 255, 255, 0.2);
 }
 
 /* Botões */
-.btn-edit, .btn-delete {
-    padding: 8px 15px;
-    border-radius: 4px;
-    text-decoration: none;
-    font-size: 0.9em;
-    font-weight: bold;
-    transition: background-color 0.3s ease, color 0.3s ease;
+.btn-edit,
+.btn-delete {
+  padding: 8px 15px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: 0.9em;
+  font-weight: bold;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .btn-edit {
-    background-color: blue;
-    color: white;
+  background-color: blue;
+  color: white;
 }
 
 .btn-edit:hover {
-    background-color: darkblue;
+  background-color: darkblue;
 }
 
 .btn-delete {
-    background-color: red;
-    color: white;
+  background-color: red;
+  color: white;
 }
 
 .btn-delete:hover {
-    background-color: darkred;
+  background-color: darkred;
 }
 
 /* Estilos da Barra de Navegação */
 .navbar {
-    background-color: #000; /* Cor de fundo preta */
-    color: #fff;
-    padding: 10px 0;
-    position: fixed; /* Fixa a barra no topo */
-    width: 100%;
-    top: 0;
-    left: 0;
-    z-index: 1000; /* Garante que a barra esteja acima de outros elementos */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+  background-color: #000;
+  color: #fff;
+  padding: 10px 0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 .navbar-container {
-    max-width: 1400px; /* Largura máxima do conteúdo da barra */
-    margin: 0 auto;
-    padding: 0 20px;
-    display: flex;
-    justify-content: space-between; /* Espaça os itens principais */
-    align-items: center; /* Alinha verticalmente */
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .navbar-brand {
-    font-weight: bold;
-    font-size: 1.5em;
-    display: flex;
-    align-items: center;
-    color: #fff;
+  font-weight: bold;
+  font-size: 1.5em;
+  display: flex;
+  align-items: center;
+  color: #fff;
 }
 
 .navbar-brand .logo {
-    height: 30px; /* Ajuste o tamanho do seu logo */
-    margin-right: 10px;
+  height: 30px;
+  margin-right: 10px;
 }
 
 .navbar-nav ul {
-    display: flex; /* Links de navegação em linha */
-    gap: 20px; /* Espaçamento entre os links */
+  display: flex;
+  gap: 20px;
 }
 
 .navbar-nav a {
-    color: #ccc; /* Cor dos links */
-    font-size: 0.95em;
-    padding: 5px 0;
-    transition: color 0.3s ease;
+  color: #ccc;
+  font-size: 0.95em;
+  padding: 5px 0;
+  transition: color 0.3s ease;
 }
 
 .navbar-nav a:hover {
-    color: #fff; /* Cor do link ao passar o mouse */
+  color: #fff;
 }
 
 .navbar-actions {
-    display: flex;
-    gap: 10px; /* Espaçamento entre os botões de ação */
-    align-items: center;
+  display: flex;
+  gap: 10px;
+  align-items: center;
 }
 
 .btn {
-    background-color: transparent;
-    color: #fff;
-    border: 1px solid transparent;
-    padding: 8px 15px;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 0.9em;
-    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+  background-color: transparent;
+  color: #fff;
+  border: 1px solid transparent;
+  padding: 8px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9em;
+  transition: background-color 0.3s ease, color 0.3s ease,
+    border-color 0.3s ease;
 }
 
 .btn:hover {
-    background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 .btn-primary {
-    background-color: #ffc107; /* Cor amarela para o botão principal (League Pass) */
-    color: #333;
-    font-weight: bold;
-    border-color: #ffc107;
+  background-color: #ffc107;
+  color: #333;
+  font-weight: bold;
+  border-color: #ffc107;
 }
 
 .btn-primary:hover {
-    background-color: #e0a800; /* Tom mais escuro ao passar o mouse */
-    border-color: #e0a800;
+  background-color: #e0a800;
+  border-color: #e0a800;
 }
 
 .btn i {
-    margin-right: 5px; /* Espaço para ícones dentro dos botões */
+  margin-right: 5px;
 }
 
-/* Esconde o checkbox e o hamburguer por padrão */
+.navbar {
+  background-color: #000;
+  color: #fff;
+  padding: 10px 0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.navbar-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-brand {
+  font-weight: bold;
+  font-size: 1.5em;
+  display: flex;
+  align-items: center;
+  color: #fff;
+}
+
+.navbar-brand .logo {
+  height: 30px;
+  margin-right: 10px;
+}
+
+.navbar-nav ul {
+  display: flex;
+  gap: 20px;
+}
+
+.navbar-nav a {
+  color: #ccc;
+  font-size: 0.95em;
+  padding: 5px 0;
+  transition: color 0.3s ease;
+}
+
+.navbar-nav a:hover {
+  color: #fff;
+}
+
+.navbar-actions {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.btn {
+  background-color: transparent;
+  color: #fff;
+  border: 1px solid transparent;
+  padding: 8px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9em;
+  transition: background-color 0.3s ease, color 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.btn-primary {
+  background-color: #ffc107;
+  color: #333;
+  font-weight: bold;
+  border-color: #ffc107;
+}
+
+.btn-primary:hover {
+  background-color: #e0a800;
+  border-color: #e0a800;
+}
+
+.btn i {
+  margin-right: 5px;
+}
+
 .menu-toggle {
-    display: none;
+  display: none;
 }
 
 .hamburger {
-    display: none; /* Esconde o ícone do hamburguer em telas grandes */
-    font-size: 1.5em;
-    cursor: pointer;
-    color: #fff;
+  display: none; /* Esconde o ícone do hamburguer em telas grandes */
+  font-size: 1.5em;
+  cursor: pointer;
+  color: #fff;
 }
 
 /* Responsividade */
+@media (max-width: 1024px) {
+  .navbar-nav ul {
+    gap: 15px;
+  }
+  .navbar-actions {
+    gap: 5px;
+  }
+}
+
 @media (max-width: 768px) {
-    .container {
-        padding: 10px;
-    }
+  .container {
+    padding: 10px;
+  }
 
-    table, th, td {
-        font-size: 0.9em;
-    }
+  table,
+  th,
+  td {
+    font-size: 0.9em;
+  }
 
-    .btn-edit, .btn-delete {
-        padding: 5px 10px;
-        font-size: 0.8em;
-    }
+  .btn-edit,
+  .btn-delete {
+    padding: 5px 10px;
+    font-size: 0.8em;
+  }
 
-    .navbar-container {
-        flex-wrap: wrap; /* Permite que os itens se quebrem para a próxima linha */
-        justify-content: center; /* Centraliza os itens quando quebram */
-    }
+  .navbar-container {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 
-    .navbar-brand {
-        flex-basis: 100%; /* O logo ocupa a largura total em telas pequenas */
-        text-align: center;
-        margin-bottom: 10px;
-        justify-content: center; /* Centraliza o conteúdo do brand */
-    }
+  .navbar-brand {
+    flex-basis: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+    justify-content: center;
+  }
 
-    .navbar-nav {
-        flex-basis: 100%; /* Ocupa a largura total para o menu de navegação */
-        order: 3; /* Coloca o menu abaixo dos botões de ação no layout flex */
-        margin-top: 15px;
-        display: none; /* Esconde o menu por padrão em telas pequenas */
-        text-align: center;
-    }
+  .navbar-nav {
+    flex-basis: 100%;
+    order: 3;
+    margin-top: 15px;
+    display: none;
+    text-align: center;
+  }
 
-    .navbar-nav ul {
-        flex-direction: column; /* Links em coluna */
-        gap: 0;
-        border-top: 1px solid #333;
-        padding-top: 10px;
-    }
+  .navbar-nav ul {
+    flex-direction: column;
+    gap: 0;
+    border-top: 1px solid #333;
+    padding-top: 10px;
+  }
 
-    .navbar-nav li {
-        width: 100%;
-        padding: 10px 0;
-        border-bottom: 1px solid #333;
-    }
+  .navbar-nav li {
+    width: 100%;
+    padding: 10px 0;
+    border-bottom: 1px solid #333;
+  }
 
-    .navbar-nav li:last-child {
-        border-bottom: none;
-    }
+  .navbar-nav li:last-child {
+    border-bottom: none;
+  }
 
-    .navbar-nav a {
-        display: block; /* Ocupa a largura total para facilitar o clique */
-        padding: 10px 0;
-    }
+  .navbar-nav a {
+    display: block;
+    padding: 10px 0;
+  }
 
-    .navbar-actions {
-        order: 2; /* Move os botões de ação para a segunda posição */
-        flex-basis: 100%;
-        justify-content: center; /* Centraliza os botões */
-        margin-bottom: 10px;
-    }
+  .navbar-actions {
+    order: 2;
+    flex-basis: 100%;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
 
-    .hamburger {
-        display: block; /* Mostra o ícone do hamburguer */
-        position: absolute;
-        right: 20px;
-        top: 25px; /* Ajuste a posição conforme necessário */
-        z-index: 1001; /* Garante que o hamburguer esteja acima do menu */
-    }
+  .hamburger {
+    display: block;
+    position: absolute;
+    right: 20px;
+    top: 25px;
+    z-index: 1001;
+  }
 
-    /* Quando o checkbox (menu-toggle) é clicado, mostra o menu */
-    .menu-toggle:checked ~ .navbar-nav {
-        display: block;
-    }
+  .menu-toggle:checked ~ .navbar-nav {
+    display: block;
+  }
 }
 
 @media (max-width: 480px) {
-    .navbar-actions {
-        flex-direction: column; /* Botões empilhados */
-        align-items: stretch; /* Ocupam a largura total */
-        gap: 5px;
-    }
+  .navbar-actions {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 5px;
+  }
 
-    .btn {
-        width: 100%; /* Botões ocupam a largura total */
-        text-align: center;
-    }
+  .btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+.navbar,
+.navbar * {
+  font-family: "Oswald", Arial, sans-serif !important;
 }

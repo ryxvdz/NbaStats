@@ -1,12 +1,11 @@
 
-/* Estilos Gerais (Reset e Base) */
 body {
     margin: 0;
     font-family: 'Oswald';
-    background-size: cover; /* Garante que a imagem cubra toda a área */
-    background-position: center; /* Centraliza a imagem */
-    background-repeat: no-repeat; /* Evita repetição da imagem */
-    min-height: 100vh; /* Garante que o body tenha pelo menos a altura da viewport */
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat; 
+    min-height: 100vh; 
 }
 #bg-video {
     position: fixed;
@@ -23,11 +22,11 @@ body {
     color: #fff;
     padding-top: 30px;
     text-align: center;
-    border: 2px solid #ffc107; /* Cor e espessura da borda */
-    border-radius: 12px;        /* Opcional: bordas arredondadas */
-    margin: 100px auto 40px auto;          /* Centraliza e dá espaço externo */
-    max-width: 500px;           /* Opcional: limita a largura */
-    background: rgba(0,0,0,0.6);/* Opcional: fundo semi-transparente */
+    border: 2px solid #ffc107; 
+    border-radius: 12px;        
+    margin: 100px auto 40px auto;          
+    max-width: 500px;           
+    background: rgba(0,0,0,0.6);
 }
 
 
@@ -44,24 +43,24 @@ a {
 
 /* Estilos da Barra de Navegação */
 .navbar {
-    background-color: #000; /* Cor de fundo preta */
+    background-color: #000; 
     color: #fff;
     padding: 10px 0;
-    position: fixed; /* Fixa a barra no topo */
+    position: fixed; 
     width: 100%;
     top: 0;
     left: 0;
-    z-index: 1000; /* Garante que a barra esteja acima de outros elementos */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+    z-index: 1000; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); 
 }
 
 .navbar-container {
-    max-width: 1400px; /* Largura máxima do conteúdo da barra */
+    max-width: 1400px; 
     margin: 0 auto;
     padding: 0 20px;
     display: flex;
-    justify-content: space-between; /* Espaça os itens principais */
-    align-items: center; /* Alinha verticalmente */
+    justify-content: space-between; 
+    align-items: center; 
 }
 
 .navbar-brand {
@@ -73,29 +72,29 @@ a {
 }
 
 .navbar-brand .logo {
-    height: 30px; /* Ajuste o tamanho do seu logo */
+    height: 30px; 
     margin-right: 10px;
 }
 
 .navbar-nav ul {
-    display: flex; /* Links de navegação em linha */
-    gap: 20px; /* Espaçamento entre os links */
+    display: flex; 
+    gap: 20px; 
 }
 
 .navbar-nav a {
-    color: #ccc; /* Cor dos links */
+    color: #ccc; 
     font-size: 0.95em;
     padding: 5px 0;
     transition: color 0.3s ease;
 }
 
 .navbar-nav a:hover {
-    color: #fff; /* Cor do link ao passar o mouse */
+    color: #fff; 
 }
 
 .navbar-actions {
     display: flex;
-    gap: 10px; /* Espaçamento entre os botões de ação */
+    gap: 10px; 
     align-items: center;
 }
 
@@ -115,67 +114,66 @@ a {
 }
 
 .btn-primary {
-    background-color: #ffc107; /* Cor amarela para o botão principal (League Pass) */
+    background-color: #ffc107; 
     color: #333;
     font-weight: bold;
     border-color: #ffc107;
 }
 
 .btn-primary:hover {
-    background-color: #e0a800; /* Tom mais escuro ao passar o mouse */
+    background-color: #e0a800;
     border-color: #e0a800;
 }
 
 .btn i {
-    margin-right: 5px; /* Espaço para ícones dentro dos botões */
+    margin-right: 5px; 
 }
 
-/* Esconde o checkbox e o hamburguer por padrão */
+
 .menu-toggle {
     display: none;
 }
 
 .hamburger {
-    display: none; /* Esconde o ícone do hamburguer em telas grandes */
+    display: none; 
     font-size: 1.5em;
     cursor: pointer;
     color: #fff;
 }
 
-/* Responsividade (Para telas menores) */
+
 @media (max-width: 1024px) {
     .navbar-nav ul {
-        gap: 15px; /* Reduz o espaçamento em telas médias */
+        gap: 15px; 
     }
 
     .navbar-actions {
-        gap: 5px; /* Reduz o espaçamento dos botões em telas médias */
+        gap: 5px; 
     }
 }
 
 @media (max-width: 768px) {
     .navbar-container {
-        flex-wrap: wrap; /* Permite que os itens se quebrem para a próxima linha */
-        justify-content: center; /* Centraliza os itens quando quebram */
-    }
+        flex-wrap: wrap; 
+        justify-content: center; 
 
     .navbar-brand {
-        flex-basis: 100%; /* O logo ocupa a largura total em telas pequenas */
+        flex-basis: 100%; 
         text-align: center;
         margin-bottom: 10px;
-        justify-content: center; /* Centraliza o conteúdo do brand */
+        justify-content: center; 
     }
 
     .navbar-nav {
-        flex-basis: 100%; /* Ocupa a largura total para o menu de navegação */
-        order: 3; /* Coloca o menu abaixo dos botões de ação no layout flex */
+        flex-basis: 100%; 
+        order: 3; 
         margin-top: 15px;
-        display: none; /* Esconde o menu por padrão em telas pequenas */
+        display: none; 
         text-align: center;
     }
 
     .navbar-nav ul {
-        flex-direction: column; /* Links em coluna */
+        flex-direction: column; 
         gap: 0;
         border-top: 1px solid #333;
         padding-top: 10px;
@@ -192,23 +190,23 @@ a {
     }
 
     .navbar-nav a {
-        display: block; /* Ocupa a largura total para facilitar o clique */
+        display: block; 
         padding: 10px 0;
     }
 
     .navbar-actions {
-        order: 2; /* Move os botões de ação para a segunda posição */
+        order: 2; 
         flex-basis: 100%;
-        justify-content: center; /* Centraliza os botões */
+        justify-content: center; 
         margin-bottom: 10px;
     }
 
     .hamburger {
-        display: block; /* Mostra o ícone do hamburguer */
+        display: block; 
         position: absolute;
         right: 20px;
-        top: 25px; /* Ajuste a posição conforme necessário */
-        z-index: 1001; /* Garante que o hamburguer esteja acima do menu */
+        top: 25px; 
+        z-index: 1001; 
     }
 
     /* Quando o checkbox (menu-toggle) é clicado, mostra o menu */
@@ -217,16 +215,16 @@ a {
     }
 }
 
-/* Estilos para telas muito pequenas (ex: celulares em modo retrato) */
+
 @media (max-width: 480px) {
     .navbar-actions {
-        flex-direction: column; /* Botões empilhados */
-        align-items: stretch; /* Ocupam a largura total */
+        flex-direction: column;
+        align-items: stretch; 
         gap: 5px;
     }
 
     .btn {
-        width: 100%; /* Botões ocupam a largura total */
+        width: 100%; 
         text-align: center;
     }
 }

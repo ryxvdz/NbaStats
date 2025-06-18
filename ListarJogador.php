@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lista de Jogadores Cadastrados</title>
+    <title>Lista de Jogadores</title>
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/ListarJogador.css">
 </head>
@@ -37,56 +37,58 @@
         </div>
     </header>
 
-    <div class="container">
-        <h1>Jogadores Cadastrados</h1>
+    <div class="main-center">
+        <div class="container">
+            <h1>Jogadores Cadastrados</h1>
 
-        <?php
-        // Inclui o arquivo de conexão com o banco de dados
-        require_once 'conexão/RotaListar.php'; //'require_once' para garantir que o arquivo seja incluído apenas uma vez
+            <?php
+            // Inclui o arquivo de conexão com o banco de dados
+            require_once 'conexão/RotaListar.php'; //'require_once' para garantir que o arquivo seja incluído apenas uma vez
 
-        // Consulta SQL para selecionar todos os jogadores
-        $sql = "SELECT ID_JOGADORES, NOME_DOS_JOGADORES, SOBRENOME, DATANASCIMENTO, ALTURA, PESO, POSICAO, TITULO_NOME FROM jogadores";
-        $result = $conn->query($sql);
+            // Consulta SQL para selecionar todos os jogadores
+            $sql = "SELECT ID_JOGADORES, NOME_DOS_JOGADORES, SOBRENOME, DATANASCIMENTO, ALTURA, PESO, POSICAO, TITULO_NOME FROM jogadores";
+            $result = $conn->query($sql);
 
-        if ($result->num_rows > 0) {
-            echo "<table>";
-            echo "<thead>";
-            echo "<tr>";
-            echo "<th>ID</th>";
-            echo "<th>Nome</th>";
-            echo "<th>Sobrenome</th>";
-            echo "<th>Data de Nascimento</th>";
-            echo "<th>Altura (cm)</th>";
-            echo "<th>Peso (kg)</th>";
-            echo "<th>Posição</th>";
-            echo "<th>Título Individual</th>";
-            echo "</tr>";
-            echo "</thead>";
-            echo "<tbody>";
-            // Saída de dados de cada linha
-            while($row = $result->fetch_assoc()) {
+            if ($result->num_rows > 0) {
+                echo "<table>";
+                echo "<thead>";
                 echo "<tr>";
-                echo "<td>" . $row["ID_JOGADORES"] . "</td>";
-                echo "<td>" . $row["NOME_DOS_JOGADORES"] . "</td>";
-                echo "<td>" . $row["SOBRENOME"] . "</td>";
-                echo "<td>" . $row["DATANASCIMENTO"] . "</td>";
-                echo "<td>" . $row["ALTURA"] . "</td>";
-                echo "<td>" . $row["PESO"] . "</td>";
-                echo "<td>" . $row["POSICAO"] . "</td>";
-                echo "<td>" . $row["TITULO_NOME"] . "</td>";
-                echo "<td><a href='EditarJogador.php?id=" . $row["ID_JOGADORES"] . "' class='btn btn-edit'>Editar</a></td>";
-                echo "<td><a href='conexão/ExcluirJogador.php?id=" . $row["ID_JOGADORES"] . "' class='btn btn-delete' onclick='return confirm(\"Tem certeza que deseja excluir este jogador?\")'>Excluir</a></td>";
+                echo "<th>ID</th>";
+                echo "<th>Nome</th>";
+                echo "<th>Sobrenome</th>";
+                echo "<th>Data de Nascimento</th>";
+                echo "<th>Altura (cm)</th>";
+                echo "<th>Peso (kg)</th>";
+                echo "<th>Posição</th>";
+                echo "<th>Título Individual</th>";
                 echo "</tr>";
+                echo "</thead>";
+                echo "<tbody>";
+                // Saída de dados de cada linha
+                while($row = $result->fetch_assoc()) {
+                    echo "<tr>";
+                    echo "<td>" . $row["ID_JOGADORES"] . "</td>";
+                    echo "<td>" . $row["NOME_DOS_JOGADORES"] . "</td>";
+                    echo "<td>" . $row["SOBRENOME"] . "</td>";
+                    echo "<td>" . $row["DATANASCIMENTO"] . "</td>";
+                    echo "<td>" . $row["ALTURA"] . "</td>";
+                    echo "<td>" . $row["PESO"] . "</td>";
+                    echo "<td>" . $row["POSICAO"] . "</td>";
+                    echo "<td>" . $row["TITULO_NOME"] . "</td>";
+                    echo "<td><a href='EditarJogador.php?id=" . $row["ID_JOGADORES"] . "' class='btn btn-edit'>Editar</a></td>";
+                    echo "<td><a href='conexão/ExcluirJogador.php?id=" . $row["ID_JOGADORES"] . "' class='btn btn-delete' onclick='return confirm(\"Tem certeza que deseja excluir este jogador?\")'>Excluir</a></td>";
+                    echo "</tr>";
+                }
+                echo "</tbody>";
+                echo "</table>";
+            } else {
+                echo "<p>Nenhum jogador cadastrado.</p>";
             }
-            echo "</tbody>";
-            echo "</table>";
-        } else {
-            echo "<p>Nenhum jogador cadastrado.</p>";
-        }
 
-        // Fecha a conexão com o banco de dados
-        $conn->close();
-        ?>
+            // Fecha a conexão com o banco de dados
+            $conn->close();
+            ?>
+        </div>
     </div>
 </body>
 </html>
