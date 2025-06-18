@@ -4,10 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Editar Jogador</title>
+    <link rel="stylesheet" href="css/EditarJogador.css">
 </head>
 <body>
     <h1>Editar Jogador</h1>
-    <form method="POST">
+    <?php
+    // ...código de conexão...
+    if (isset($_GET['id'])) {
+        $id = intval($_GET['id']);
+        $conn = new mysqli("localhost", "root", "", "projetobaska");
+        $sql = "SELECT * FROM jogadores WHERE ID_JOGADORES = $id";
+        $result = $conn->query($sql);
+        if ($result && $result->num_rows > 0) {
+            $jogador = $result->fetch_assoc();
+        } else {
+            echo "Jogador não encontrado!";
+            exit;
+        }
+        $conn->close();
+    } else {
+        echo "ID do jogador não informado!";
+        exit;
+    }
+    ?>
+   
+        <form action="conexão/AtualizarJogador.php?id=<?php echo $jogador['ID_JOGADORES']; ?>" method="POST">
         <label>Nome:</label>
         <input type="text" name="nome" value="<?php echo $jogador['NOME_DOS_JOGADORES']; ?>" required><br>
         <label>Sobrenome:</label>

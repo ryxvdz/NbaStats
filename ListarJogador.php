@@ -21,7 +21,7 @@
 
             <nav class="navbar-nav">
                 <ul>
-                    <li><a href="ListarJogadores.php">Jogadores</a></li>
+                    <li><a href="ListarJogador.php">Jogadores</a></li>
                     <li><a href="CadastrarJogador.php">Cadastrar Jogadores</a></li>
                     <li><a href="https://www.nba.com/standings">Conferencias</a></li>
                 </ul>
