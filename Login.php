@@ -5,6 +5,17 @@
     }
 </script>
 <?php endif; ?>
+
+<?php
+$erroMsg = '';
+if (isset($_GET['erro'])) {
+    if ($_GET['erro'] == 'senha') {
+        $erroMsg = 'Senha incorreta!';
+    } elseif ($_GET['erro'] == 'usuario') {
+        $erroMsg = 'Usuário não encontrado!';
+    }
+}
+?>
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -16,6 +27,11 @@
 <body>
     <div class="container">
         <h1>Login</h1>
+        <?php if ($erroMsg): ?>
+            <div style="color: #fff; background: #c0392b; padding: 10px; border-radius: 6px; margin-bottom: 15px; text-align:center;">
+                <?php echo $erroMsg; ?>
+            </div>
+        <?php endif; ?>
         <form action="conexão/processaLogin.php" method="post">
             <div class="form-group">
                 <label for="usuario">Usuário:</label>

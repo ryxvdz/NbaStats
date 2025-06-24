@@ -14,12 +14,17 @@ $result = $stmt->get_result();
 if ($result && $row = $result->fetch_assoc()) {
     if (password_verify($senha, $row['senha'])) {
         $_SESSION['usuario'] = $usuario;
-        $_SESSION['nome'] = $row['nome']; 
+        $_SESSION['nome'] = $row['nome'];
         header("Location: ../PaginaInicial.php");
         exit;
+    } else {
+        
+        header("Location: ../Login.php?erro=senha");
+        exit;
     }
+} else {
+    
+    header("Location: ../Login.php?erro=usuario");
+    exit;
 }
-
-header("Location: login.php?erro=1");
-exit;
 ?>
