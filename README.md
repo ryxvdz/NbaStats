@@ -4,6 +4,7 @@
 
 ## 🚀 Funcionalidades
 
+- **Tela de Login**: Sistema seguro de autenticação com hashing de senha e sessões PHP.
 - **Página Inicial**: Vídeo de fundo, navbar fixa e atalhos para as principais seções.
 - **Cadastro de Jogadores**: Formulário completo com nome, altura, posição, títulos etc.
 - **Listagem**: Tabela responsiva com jogadores cadastrados e ações de editar/excluir.
@@ -19,7 +20,8 @@ NbaStats/
 │   ├── CadastrarJogador.css
 │   ├── EditarJogador.css
 │   ├── ListarJogador.css
-│   └── PaginaInicial.css
+│   ├── PaginaInicial.css
+│   └── Login.css
 │
 ├── conexão/
 │   ├── AtualizarJogador.php
@@ -27,8 +29,11 @@ NbaStats/
 │   ├── ExcluirJogador.php
 │   ├── Methods.php
 │   ├── processaJogador.php
+│   ├── processaLogin.php
+│   ├── processaRegistro.php
 │   ├── RotaExcluir.php
-│   └── RotaListar.php
+│   ├── RotaListar.php
+│   └── Logout.php
 │
 ├── database/
 │   └── projetobaska.sql
@@ -40,9 +45,10 @@ NbaStats/
 ├── PaginaInicial.php
 ├── CadastrarJogador.php
 ├── EditarJogador.php
-└── ListarJogador.php
+├── ListarJogador.php
+├── Login.php
+└── Registrar.php
 ```
-
 
 ## 🛠️ Tecnologias Utilizadas
 
@@ -70,4 +76,3 @@ NbaStats/
 ## 📚 Créditos
 
 Projeto desenvolvido por **Ryan Dias** e **Luan Prates**, com fins acadêmicos e de aprendizado. Inspirado no universo da NBA.
-
